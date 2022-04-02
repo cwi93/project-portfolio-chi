@@ -1,18 +1,13 @@
 import styled from "styled-components";
 
 const HeaderNavigation = styled.div`
-	ul {
+	nav {
 		float: right;
 		list-style: none;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-
-	li {
-		padding-right: 2em;
-	}
-
 	/* Underline styles */
 	a {
 		color: #dfc0eb;
@@ -22,6 +17,7 @@ const HeaderNavigation = styled.div`
 		display: block;
 		position: relative;
 		padding: 0.4em 0;
+		margin-right: 15px;
 	}
 
 	/* Fade in */
@@ -37,17 +33,17 @@ const HeaderNavigation = styled.div`
 	}
 
 	/* Slide in */
-	li a {
+	a {
 		overflow: hidden;
 	}
 
-	li a::after {
+	a::after {
 		opacity: 1;
 		transform: translate3d(-100%, 0, 0);
 	}
 
-	li a:hover::after,
-	li a:focus::after {
+	a:hover::after,
+	a:focus::after {
 		transform: translate3d(0, 0, 0);
 	}
 `;

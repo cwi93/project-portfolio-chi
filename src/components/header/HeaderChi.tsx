@@ -1,21 +1,14 @@
+import { Link } from "react-router-dom";
 import HeaderNavigation from "./HeaderChi.styled";
 
 export default function HeaderChi() {
 	return (
 		<HeaderNavigation className="topnav">
-			<ul>
-				<li>
-					<a className="active" href="#home">
-						Home
-					</a>
-				</li>
-				<li>
-					<a href="#about">About</a>
-				</li>
-				<li>
-					<a href="#contact">Contact</a>
-				</li>
-			</ul>
+			<nav>
+				<Link to="#home">Home</Link>
+				<Link to="#about">About</Link>
+				<Link to="#contact">Contact</Link>
+			</nav>
 		</HeaderNavigation>
 	);
 }
