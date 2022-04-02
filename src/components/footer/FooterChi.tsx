@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { github, linkedin, instagram } from "@fortawesome/react-fontawesome";
+
 import FooterContainer from "./FooterChi.styled";
 
 export default function FooterChi() {
@@ -6,13 +9,13 @@ export default function FooterChi() {
 		<FooterContainer>
 			<nav>
 				<Link to="https://github.com/cwi93" target="_blank">
-					Github
+					<FontAwesomeIcon icon={github} />
 				</Link>
 				<Link to="https://nl.linkedin.com/in/chi-wai-ip" target="_blank">
-					LinkedIn
+					<FontAwesomeIcon icon={linkedin} />
 				</Link>
 				<Link to="https://www.instagram.com/flylikeachi6/" target="_blank">
-					Instagram
+					<FontAwesomeIcon icon={instagram} />
 				</Link>
 			</nav>
 		</FooterContainer>
