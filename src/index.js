@@ -7,7 +7,7 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
-	<StrictMode>
-		<PorfolioChi />
-	</StrictMode>
+  <StrictMode>
+    <PorfolioChi />
+  </StrictMode>
 );
