@@ -5,8 +5,6 @@ const HeaderNavigation = styled.div`
 		float: right;
 		list-style: none;
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
 	}
 	/* Underline styles */
 	a {
