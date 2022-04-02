@@ -1,14 +1,12 @@
 {
-  "name": "react",
+  "name": "project-portfolio-chi",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "eslint": "8.12.0",
+    "javascript": "1.0.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-scripts": "4.0.0",
