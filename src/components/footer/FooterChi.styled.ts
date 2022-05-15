@@ -4,7 +4,7 @@ const FooterContainer = styled.div`
   nav {
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: relative;
     bottom: 0;
     height: 1.5em;
     width: 100%;

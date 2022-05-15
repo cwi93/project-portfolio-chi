@@ -15,12 +15,12 @@ export default function PorfolioChi() {
       <LoadImage
         image={require("./images/Chi_Happy_Beach.jpg")}
         imgAlt="Chi_Happy_Beach"
-        className="right Chi_Happy_Beach"
+        className="right_image Chi_Happy_Beach"
       />
       <LoadImage
         image={require("./images/Chi_Tennis_Volley.jpg")}
         imgAlt="Chi_Tennis_Volley"
-        className="left Chi_Tennis_Volley"
+        className="left_image Chi_Tennis_Volley"
       />
       <BrowserRouter>
         <FooterChi />

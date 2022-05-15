@@ -1,13 +1,8 @@
 import styled, { css } from "styled-components";
 
 const LoadImg = () => css`
-  .left_image {
-    display: flex;
-  }
-
-  .right_image {
-    display: flex;
-  }
+  display: flex;
+  width: 70%;
 `;
 
 export const LoadImgContainer = styled.img`
