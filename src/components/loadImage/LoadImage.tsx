@@ -1,5 +1,14 @@
-import LoadImg from "./LoadImage.styled";
+import React from "react";
+import { LoadImgContainer } from "./LoadImage.styled";
 
-export default function LoadImage({ image, imgAlt, className }) {
-  return <LoadImg src={image} alt={imgAlt} className={className} />;
-}
+type imageProps = {
+  image: string;
+  imgAlt?: string;
+  className: string;
+};
+
+const LoadImage = ({ image, imgAlt, className }: imageProps) => {
+  return <LoadImgContainer src={image} alt={imgAlt} className={className} />;
+};
+
+export default LoadImage;
