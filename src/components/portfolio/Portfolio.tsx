@@ -1,5 +1,5 @@
 import React from "react";
-import CaseBlock from "./Portfolio.styled";
+import { CaseBlock, CaseAnchor, CaseContainer } from "./Portfolio.styled";
 
 const casesArray = [
   { title: "ANWB", link: "ANWB" },
@@ -11,7 +11,15 @@ const casesArray = [
 ];
 
 export default function Portfolio() {
-  return casesArray.forEach((cases) => {
-    <CaseBlock href={cases.link}>{cases.title} </CaseBlock>;
-  });
+  return (
+    <CaseContainer>
+      {casesArray.map((cases) => {
+        return (
+          <CaseAnchor className="cases">
+            <CaseBlock href={cases.link}>{cases.title}</CaseBlock>
+          </CaseAnchor>
+        );
+      })}
+    </CaseContainer>
+  );
 }
