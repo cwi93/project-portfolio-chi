@@ -6,7 +6,6 @@ const FooterContainer = styled.div`
     justify-content: center;
     position: relative;
     bottom: 0;
-    height: 1.5em;
     width: 100%;
   }
   a {
@@ -17,6 +16,11 @@ const FooterContainer = styled.div`
 
   a:hover {
     opacity: 50%;
+  }
+
+  svg {
+    width: 100%;
+    height: 45px;
   }
 `;
 

@@ -6,10 +6,9 @@ const ImgDiv = styled.div`
 
 const LoadImg = () => css`
   /* display: flex; */
-  width: 70%;
+  width: 60%;
   object-fit: cover;
   object-position: center;
-  display: block;
 `;
 
 const LoadImgContainer = styled.img`
