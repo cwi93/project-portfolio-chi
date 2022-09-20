@@ -15,31 +15,31 @@ import HongKongCity from "./images/HongKongCity.png";
 const casesArray = [
   {
     id: "ANWB",
-    title: "ANWB",
+    position: "Frontend Developer",
     link: "https://www.anwb.nl",
     logo: `${ANWB}`
   },
   {
     id: "Fruition Partners / DXC",
-    title: "Fruition Partners / DXC",
+    position: "Technical Consultant",
     link: "https://www.fruitionpartners.nl/",
     logo: `${Fruition}`
   },
   {
     id: "Evident",
-    title: "Evident",
+    position: "Web Developer",
     link: "https://www.valtech.com/valtech-welcomes-evident/",
     logo: `${Evident}`
   },
   {
     id: "E-Active",
-    title: "E-Active",
+    position: "Intern / Web developer",
     link: "https://www.e-active.nl/",
     logo: `${EActive}`
   },
   {
     id: "HKC",
-    title: "HKC",
+    position: "Web Developer / Content Creator",
     link: "https://www.hongkongcity-zwolle.nl/",
     logo: `${HongKongCity}`
   }
@@ -54,11 +54,11 @@ export default function Portfolio() {
             <CaseBlock href={cases.link}>
               <CaseImage
                 src={cases.logo}
-                alt={`${cases.title} Logo`}
-                className={`${cases.title} Logo`}
+                alt={`${cases.id} Logo`}
+                className={`${cases.id} Logo`}
               />
               <hgroup className="case-block">
-                <h5 className="case-block-title">{cases.title}</h5>
+                <h5 className="case-block-title">{cases.position}</h5>
               </hgroup>
             </CaseBlock>
           </CaseAnchor>
