@@ -1,4 +1,3 @@
-import React from "react";
 import { ImgDiv, LoadImgContainer } from "./LoadImage.styled";
 
 type imageProps = {

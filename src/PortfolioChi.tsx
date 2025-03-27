@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import LoadImage from "./components/loadImage/LoadImage";
 import HeaderChi from "./components/header/HeaderChi";
