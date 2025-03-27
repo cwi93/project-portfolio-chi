@@ -1,14 +1,17 @@
 import styled, { css } from "styled-components";
 
 const ImgDiv = styled.div`
-  display: inline-block;
+  width: 100%;
+  display: flex;
+
+  .right {
+    float: right;
+    margin-left: auto;
+  }
 `;
 
 const LoadImg = () => css`
-  /* display: flex; */
   width: 60%;
-  object-fit: cover;
-  object-position: center;
 `;
 
 const LoadImgContainer = styled.img`
