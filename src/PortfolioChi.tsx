@@ -29,6 +29,9 @@ export default function PorfolioChi() {
         className="right_image Chi_Tennis_Volley"
       />
       <BrowserRouter>
+        <Portfolio />
+      </BrowserRouter>
+      <BrowserRouter>
         <FooterChi />
       </BrowserRouter>
     </PorfolioChiContainer>
