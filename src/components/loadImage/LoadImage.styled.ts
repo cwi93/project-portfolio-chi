@@ -12,6 +12,7 @@ const ImgDiv = styled.div`
 
 const LoadImg = () => css`
   width: 60%;
+  flex: 1 1 100%;
 `;
 
 const LoadImgContainer = styled.img`
