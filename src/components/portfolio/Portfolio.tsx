@@ -5,6 +5,7 @@ import {
   CaseImage
 } from "./Portfolio.styled";
 
+import Thirdera from "./images/Thirdera.png";
 import ANWB from "./images/ANWB.png";
 import Fruition from "./images/Fruition.png";
 import Evident from "./images/Evident.png";
@@ -12,6 +13,12 @@ import EActive from "./images/E-Active.png";
 import HongKongCity from "./images/HongKongCity.png";
 
 const casesArray = [
+  {
+    id: "Thirdera",
+    position: "Design Technologist",
+    link: "https://www.thirdera.com/",
+    logo: `${Thirdera}`
+  },
   {
     id: "ANWB",
     position: "Frontend Developer",
@@ -47,6 +54,7 @@ const casesArray = [
 export default function Portfolio() {
   return (
     <CaseContainer>
+      <h1>MY PORTFOLIO</h1>
       {casesArray.map((cases) => {
         return (
           <CaseAnchor key={cases.id} className="cases">

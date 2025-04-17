@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-import LoadImage from "./components/loadImage/LoadImage";
 import HeaderChi from "./components/header/HeaderChi";
+import ChiWai from "./components/chiwai/ChiWai";
 import Portfolio from "./components/portfolio/Portfolio";
 import FooterChi from "./components/footer/FooterChi";
 
@@ -17,20 +17,8 @@ export default function PorfolioChi() {
       <BrowserRouter>
         <HeaderChi />
       </BrowserRouter>
-      <LoadImage
-        image={require("./images/Chi_Happy_Beach.jpg")}
-        imgAlt="Chi_Happy_Beach"
-        className="left_image Chi_Happy_Beach"
-      />
+      <ChiWai />
       <Portfolio />
-      <LoadImage
-        image={require("./images/Chi_Tennis_Volley.jpg")}
-        imgAlt="Chi_Tennis_Volley"
-        className="right_image Chi_Tennis_Volley"
-      />
-      <BrowserRouter>
-        <Portfolio />
-      </BrowserRouter>
       <BrowserRouter>
         <FooterChi />
       </BrowserRouter>

@@ -6,11 +6,13 @@ const HeaderNavigation = styled.div`
     float: right;
     list-style: none;
     display: flex;
+    padding-top: 24px;
   }
   /* Underline styles */
   a {
     color: #dfc0eb;
-    font-size: 1.5rem;
+    text-shadow: 1px 1px #9c86a4;
+    font-size: 2em;
     font-weight: bold;
     text-decoration: none;
     display: block;

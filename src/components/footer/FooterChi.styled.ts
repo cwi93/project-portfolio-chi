@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
+  position: relative;
+  padding-top: 24px;
+
   nav {
     display: flex;
     justify-content: center;
@@ -22,6 +25,34 @@ const FooterContainer = styled.div`
     width: 100%;
     height: 45px;
   }
+
+  img {
+    position: relative;
+    -webkit-filter: brightness(20%);
+    filter: brightness(50%);
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+  }
 `;
 
-export default FooterContainer;
+const ContactInfo = styled.div`
+  position: absolute;
+  z-index: 1;
+  padding: 0 24px;
+  text-align: center;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h1 {
+    font-size: 3rem;
+    color: #dfc0eb;
+    text-shadow: 1px 1px #9c86a4;
+  }
+  p {
+    color: #dfc0eb;
+    text-shadow: 1px 1px #9c86a4;
+    font-size: 1.5rem;
+  }
+`;
+
+export { FooterContainer, ContactInfo };

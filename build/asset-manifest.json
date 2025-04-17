@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/static/js/main.523bf21b.js",
+    "static/media/Chi_Happy_Beach.jpg": "/static/media/Chi_Happy_Beach.5ee2f82606c99fe090fc.jpg",
+    "static/media/Chi_Tennis_Volley.jpg": "/static/media/Chi_Tennis_Volley.456bfe4f41fb10e5b01b.jpg",
+    "static/media/Thirdera.png": "/static/media/Thirdera.4ecefbde6d1e4f13b088.png",
+    "static/media/HongKongCity.png": "/static/media/HongKongCity.a6e0c30246d7ca319295.png",
+    "static/media/Fruition.png": "/static/media/Fruition.d868e2577e1e05aea9f8.png",
+    "static/media/ANWB.png": "/static/media/ANWB.dbb66ed5c7a45e3ac135.png",
+    "index.html": "/index.html",
+    "main.523bf21b.js.map": "/static/js/main.523bf21b.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.523bf21b.js"
+  ]
+}
