@@ -1,5 +1,10 @@
-import LoadImage from "../../components/loadImage/LoadImage";
-import { ChiWaiContainer, ChiWaiIntro } from "./ChiWai.styled";
+import {
+  ChiWaiContainer,
+  ChiWaiIntro,
+  ChiWaiImportImage,
+  ChiWaiImage,
+  ScrollDown
+} from "./ChiWai.styled";
 
 import Chi_Happy_Beach from "../../images/Chi_Happy_Beach.jpg";
 
@@ -16,11 +21,17 @@ export default function ChiWai() {
           and presenting designs with or to all parties involved.
         </p>
       </ChiWaiIntro>
-      <LoadImage
-        image={Chi_Happy_Beach}
-        imgAlt="Chi_Happy_Beach"
-        className="left_image Chi_Happy_Beach"
-      />
+      <ChiWaiImage>
+        <ChiWaiImportImage
+          image={Chi_Happy_Beach}
+          imgAlt="Chi_Happy_Beach"
+          className="left_image Chi_Happy_Beach"
+        />
+      </ChiWaiImage>
+      <ScrollDown>
+        <span></span>
+        <span></span>
+      </ScrollDown>
     </ChiWaiContainer>
   );
 }

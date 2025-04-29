@@ -21,9 +21,37 @@ const CaseContainer = styled.div`
     white-space: pre-wrap;
   }
 
-  .case-block-title {
+  .case-block-description {
+    text-transform: none;
+    display: none;
+  }
+
+  .case-block-role {
+    text-transform: uppercase;
     color: #fff;
     font-size: 1.3rem;
+  }
+
+  @-webkit-keyframes float-up {
+    100% {
+      -webkit-transform: translateY(-25%);
+    }
+
+    50% {
+      -webkit-transform: translateY(-25%);
+      transform: translateY(-25%);
+    }
+  }
+
+  @-webkit-keyframes float-bottom-to-top {
+    100% {
+      -webkit-transform: translateY(-15%);
+    }
+
+    50% {
+      -webkit-transform: translateY(-15%);
+      transform: translateY(-15%);
+    }
   }
 `;
 
@@ -38,10 +66,10 @@ const CaseAnchor = styled.div`
 const CaseBlock = styled.a`
   position: relative;
   display: flex;
+  min-height: 200px;
   padding: 50px 100px;
   border: solid 2px #dfc0eb;
   text-align: center;
-  text-transform: uppercase;
 
   background-image: linear-gradient(#dfc0eb 100% 100%);
   background-size: 200% 1em;
@@ -52,6 +80,20 @@ const CaseBlock = styled.a`
     transition: background-size 0.3s 0.3s, background-position 0.3s;
     background-size: 200% 100%;
     background-position: 100% 100%;
+
+    .logo-hover-floating {
+      display: block;
+      animation: float-up 5s;
+    }
+
+    .case-block-description {
+      display: block;
+      color: #fff;
+      position: relative;
+      top: 40px;
+
+      animation: float-bottom-to-top 5s;
+    }
   }
 `;
 
