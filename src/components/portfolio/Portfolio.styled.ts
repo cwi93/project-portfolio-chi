@@ -102,10 +102,6 @@ const CaseImage = styled.img`
   height: 100%;
   padding-bottom: 60px;
   z-index: 1;
-
-  @media only screen and (max-width: 600px) {
-    display: none;
-  }
 `;
 
 export { CaseContainer, CaseAnchor, CaseBlock, CaseImage };
