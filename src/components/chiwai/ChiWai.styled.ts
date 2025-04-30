@@ -41,33 +41,28 @@ const ScrollDown = styled.div`
     padding: 0;
   }
 
-  span {
-    width: 20px;
-    height: 42px;
-    background: #dfc0eb;
-    border-radius: 5px;
-    margin: 6px;
+  .arrow {
+    border: solid #dfc0eb;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 0 40px 40px 0;
     animation: move 3s ease-in-out;
-    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
   }
 
-  span:nth-of-type(1) {
-    transform: rotate(-45deg);
-  }
-
-  span:nth-of-type(2) {
-    transform: rotate(45deg);
+  .arrow:after {
+    border-radius: 5px;
   }
 
   @keyframes move {
     0% {
-      margin-top: 5px;
+      transform: translateY(5px) rotate(45deg);
     }
     50% {
-      margin-top: 30px;
+      transform: translateY(30px) rotate(45deg);
     }
     100% {
-      margin-top: 5px;
+      transform: translateY(5px) rotate(45deg);
     }
   }
 `;

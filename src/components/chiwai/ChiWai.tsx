@@ -29,8 +29,7 @@ export default function ChiWai() {
         />
       </ChiWaiImage>
       <ScrollDown>
-        <span></span>
-        <span></span>
+        <i className="arrow"> </i>
       </ScrollDown>
     </ChiWaiContainer>
   );
