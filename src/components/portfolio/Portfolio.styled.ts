@@ -6,7 +6,6 @@ const CaseContainer = styled.div`
 
   h1 {
     color: #dfc0eb;
-    text-shadow: 1px 1px #9c86a4;
     width: 100%;
     padding-left: 24px;
   }
@@ -24,6 +23,8 @@ const CaseContainer = styled.div`
   .case-block-description {
     text-transform: none;
     display: none;
+    background-color: #fff;
+    margin: 0;
   }
 
   .case-block-role {
@@ -35,6 +36,7 @@ const CaseContainer = styled.div`
   @-webkit-keyframes float-up {
     100% {
       -webkit-transform: translateY(-25%);
+      transform: translateY(-25%);
     }
 
     50% {
@@ -46,6 +48,7 @@ const CaseContainer = styled.div`
   @-webkit-keyframes float-bottom-to-top {
     100% {
       -webkit-transform: translateY(-15%);
+      transform: translateY(-15%);
     }
 
     50% {

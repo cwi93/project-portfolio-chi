@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 
 const PorfolioChi = () => css`
-  font-family: Helvetica, sans-serif;
+  font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+    sans-serif;
   color: #000;
 
   overflow: hidden;

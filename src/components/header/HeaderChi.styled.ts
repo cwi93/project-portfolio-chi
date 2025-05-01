@@ -11,7 +11,6 @@ const HeaderNavigation = styled.div`
   /* Underline styles */
   a {
     color: #dfc0eb;
-    text-shadow: 1px 1px #9c86a4;
     font-size: 2em;
     font-weight: bold;
     text-decoration: none;

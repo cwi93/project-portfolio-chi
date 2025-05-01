@@ -46,11 +46,9 @@ const ContactInfo = styled.div`
   h1 {
     font-size: 3rem;
     color: #dfc0eb;
-    text-shadow: 1px 1px #9c86a4;
   }
   p {
     color: #dfc0eb;
-    text-shadow: 1px 1px #9c86a4;
     font-size: 1.5rem;
   }
 `;
