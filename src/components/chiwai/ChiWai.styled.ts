@@ -5,14 +5,24 @@ const ChiWaiContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 24px 0;
+  padding: 12px 0;
 `;
 
 const ChiWaiIntro = styled.div`
+  h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .one_sentence {
+    font-weight: bold;
+  }
+
   width: 46%;
   color: #dfc0eb;
-  text-shadow: 1px 1px #9c86a4;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   padding-left: 24px;
 
   h1,
