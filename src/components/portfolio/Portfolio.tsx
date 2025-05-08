@@ -7,7 +7,7 @@ import {
 
 import Thirdera from "./images/Thirdera.png";
 import ANWB from "./images/ANWB.png";
-import Fruition from "./images/Fruition.png";
+import DXC from "./images/DXC_Technology.png";
 import Evident from "./images/Evident.png";
 import EActive from "./images/E-Active.png";
 import HongKongCity from "./images/HongKongCity.png";
@@ -32,8 +32,8 @@ const casesArray = [
   {
     id: "Fruition Partners / DXC",
     role: "Technical Consultant",
-    link: "https://www.fruitionpartners.nl/",
-    logo: `${Fruition}`,
+    link: "https://www.dxc.nl/",
+    logo: `${DXC}`,
     description:
       "As technical consultant I was responsible for development in Service Now using HTML, CSS and Javascript. My main focus and specialization is building portals (front-end) in Service Now. It was also important to use my expertise in order to guide the customer or give the customer advise."
   },
@@ -70,7 +70,7 @@ export default function Portfolio() {
       {casesArray.map((cases) => {
         return (
           <CaseAnchor key={cases.id} className="cases">
-            <CaseBlock href={cases.link}>
+            <CaseBlock href={cases.link} target="_blank">
               <CaseImage
                 src={cases.logo}
                 alt={`${cases.id} Logo`}
