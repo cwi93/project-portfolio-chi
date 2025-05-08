@@ -20,11 +20,18 @@ const CaseContainer = styled.div`
     white-space: pre-wrap;
   }
 
+  .logo-hover-floating {
+    animation: float-down 5s forwards;
+  }
+
   .case-block-description {
+    opacity: 0;
     text-transform: none;
-    display: none;
-    background-color: #fff;
+    text-align: center;
     margin: 0;
+    padding: 0px 12px;
+    color: #fff;
+    animation: float-down-fadeout 2s forwards;
   }
 
   .case-block-role {
@@ -47,13 +54,54 @@ const CaseContainer = styled.div`
 
   @-webkit-keyframes float-bottom-to-top {
     100% {
-      -webkit-transform: translateY(-15%);
-      transform: translateY(-15%);
+      -webkit-transform: translateY(-10%);
+      transform: translateY(-10%);
+      opacity: 1;
     }
 
     50% {
-      -webkit-transform: translateY(-15%);
-      transform: translateY(-15%);
+      -webkit-transform: translateY(-10%);
+      transform: translateY(-10%);
+    }
+
+    0% {
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes float-down {
+    100% {
+      -webkit-transform: translateY(10%);
+      transform: translateY(10%);
+    }
+
+    50% {
+      -webkit-transform: translateY(10%);
+      transform: translateY(10%);
+    }
+
+    0% {
+      -webkit-transform: translateY(-25%);
+      transform: translateY(-25%);
+    }
+  }
+
+  @-webkit-keyframes float-down-fadeout {
+    100% {
+      -webkit-transform: translateY(10%);
+      transform: translateY(10%);
+      opacity: 0;
+    }
+
+    50% {
+      -webkit-transform: translateY(10%);
+      transform: translateY(10%);
+    }
+
+    0% {
+      -webkit-transform: translateY(-10%);
+      transform: translateY(-10%);
+      opacity: 1;
     }
   }
 `;
@@ -69,13 +117,13 @@ const CaseAnchor = styled.div`
 const CaseBlock = styled.a`
   position: relative;
   display: flex;
-  min-height: 200px;
-  padding: 50px 100px;
+  min-height: 230px;
+  padding: 50px 150px;
   border: solid 2px #dfc0eb;
   text-align: center;
 
   background-image: linear-gradient(#dfc0eb 100% 100%);
-  background-size: 200% 1em;
+  background-size: 200%;
   background-position: 100% 100%;
   background-repeat: no-repeat;
   transition: background-size 0.3s, background-position 0.3s 0.3s;
@@ -85,23 +133,22 @@ const CaseBlock = styled.a`
     background-position: 100% 100%;
 
     .logo-hover-floating {
-      display: block;
-      animation: float-up 5s;
+      display: flex;
+      animation: float-up 5s forwards;
     }
 
     .case-block-description {
-      display: block;
       color: #fff;
       position: relative;
-      top: 40px;
 
-      animation: float-bottom-to-top 5s;
+      animation: float-bottom-to-top 2s forwards;
     }
   }
 `;
 
 const CaseImage = styled.img`
-  width: 100%;
+  max-height: 100px;
+  max-width: 150px;
   height: 100%;
   padding-bottom: 60px;
   z-index: 1;
