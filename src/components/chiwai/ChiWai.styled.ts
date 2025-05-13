@@ -20,7 +20,13 @@ const ChiWaiIntro = styled.div`
     font-weight: bold;
   }
 
-  width: 46%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 46%;
+  }
+
   color: #dfc0eb;
   font-size: 1.8rem;
   padding-left: 24px;
@@ -32,12 +38,23 @@ const ChiWaiIntro = styled.div`
 `;
 
 const ChiWaiImage = styled.div`
-  width: 50%;
-  padding-left: 24px;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    height: 300px;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 50%;
+    padding-left: 24px;
+  }
 `;
 
 const ChiWaiImportImage = styled(ImgDiv)`
   width: 45%;
+
+  @media only screen and (max-width: 768px) {
+    height: 300px;
+    object-fit: cover;
+  }
 `;
 
 const ScrollDown = styled.div`
@@ -74,6 +91,10 @@ const ScrollDown = styled.div`
     100% {
       transform: translateY(5px) rotate(45deg);
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
   }
 `;
 
