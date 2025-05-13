@@ -125,6 +125,7 @@ const CaseAnchor = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
+    flex-grow: 1;
     position: relative;
     width: 25%;
     padding: 24px;
