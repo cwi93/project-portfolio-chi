@@ -11,7 +11,6 @@ const CaseContainer = styled.div`
   }
 
   .case-block {
-    position: absolute;
     width: 100%;
     bottom: 0;
     left: 0;
@@ -20,24 +19,36 @@ const CaseContainer = styled.div`
     white-space: pre-wrap;
   }
 
-  .logo-hover-floating {
-    animation: float-down 5s forwards;
-  }
-
   .case-block-description {
-    opacity: 0;
     text-transform: none;
     text-align: center;
     margin: 0;
     padding: 0px 12px;
     color: #fff;
-    animation: float-down-fadeout 2s forwards;
   }
 
   .case-block-role {
     text-transform: uppercase;
     color: #fff;
     font-size: 1.3rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .case-block {
+      position: absolute;
+    }
+
+    .case-block-description {
+      opacity: 0;
+    }
+
+    .logo-hover-floating {
+      animation: float-down 5s forwards;
+    }
+
+    .case-block-description {
+      animation: float-down-fadeout 2s forwards;
+    }
   }
 
   @-webkit-keyframes float-up {
@@ -108,17 +119,20 @@ const CaseContainer = styled.div`
 
 const CaseAnchor = styled.div`
   background-color: #fff;
-  position: relative;
-  padding: 24px;
-  flex-grow: 1;
-  width: 25%;
+
+  @media only screen and (max-width: 768px) {
+    padding: 12px 24px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    position: relative;
+    width: 25%;
+    padding: 24px;
+  }
 `;
 
 const CaseBlock = styled.a`
-  position: relative;
   display: flex;
-  min-height: 230px;
-  padding: 50px 150px;
   border: solid 2px #dfc0eb;
   text-align: center;
 
@@ -127,21 +141,32 @@ const CaseBlock = styled.a`
   background-position: 100% 100%;
   background-repeat: no-repeat;
   transition: background-size 0.3s, background-position 0.3s 0.3s;
-  &:hover {
-    transition: background-size 0.3s 0.3s, background-position 0.3s;
-    background-size: 200% 100%;
-    background-position: 100% 100%;
 
-    .logo-hover-floating {
-      display: flex;
-      animation: float-up 5s forwards;
-    }
+  @media only screen and (max-width: 768px) {
+    padding: 24px;
+  }
 
-    .case-block-description {
-      color: #fff;
-      position: relative;
+  @media only screen and (min-width: 768px) {
+    position: relative;
+    min-height: 230px;
+    padding: 50px 150px;
 
-      animation: float-bottom-to-top 2s forwards;
+    &:hover {
+      transition: background-size 0.3s 0.3s, background-position 0.3s;
+      background-size: 200% 100%;
+      background-position: 100% 100%;
+
+      .logo-hover-floating {
+        display: flex;
+        animation: float-up 5s forwards;
+      }
+
+      .case-block-description {
+        color: #fff;
+        position: relative;
+
+        animation: float-bottom-to-top 2s forwards;
+      }
     }
   }
 `;

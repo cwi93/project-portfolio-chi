@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 const FooterContainer = styled.div`
   position: relative;
-  padding-top: 24px;
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 24px;
+  }
 
   nav {
     display: flex;
@@ -37,7 +40,6 @@ const FooterContainer = styled.div`
 const ContactInfo = styled.div`
   position: absolute;
   z-index: 1;
-  padding: 0 24px;
   text-align: center;
   top: 30%;
   left: 50%;
@@ -47,9 +49,14 @@ const ContactInfo = styled.div`
     font-size: 3rem;
     color: #dfc0eb;
   }
+
   p {
     color: #dfc0eb;
     font-size: 1.5rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 24px;
   }
 `;
 
