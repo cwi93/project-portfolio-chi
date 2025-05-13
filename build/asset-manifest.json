@@ -1,18 +1,17 @@
 {
   "files": {
-    "main.js": "/static/js/main.c4316a47.js",
-    "static/media/Chi_Happy_Beach.jpg": "/static/media/Chi_Happy_Beach.5ee2f82606c99fe090fc.jpg",
+    "main.js": "/static/js/main.33167f68.js",
+    "static/media/Chi_Japan.png": "/static/media/Chi_Japan.27bba17813d1b13dba65.png",
     "static/media/Chi_Tennis_Volley.jpg": "/static/media/Chi_Tennis_Volley.456bfe4f41fb10e5b01b.jpg",
     "static/media/Thirdera.png": "/static/media/Thirdera.4ecefbde6d1e4f13b088.png",
-    "static/media/centurygothic.ttf": "/static/media/centurygothic.b194aa2bd524e2c973f7.ttf",
+    "static/media/DXC_Technology.png": "/static/media/DXC_Technology.d1aff6063a3d55dbdb57.png",
     "static/media/HongKongCity.png": "/static/media/HongKongCity.a6e0c30246d7ca319295.png",
-    "static/media/Fruition.png": "/static/media/Fruition.d868e2577e1e05aea9f8.png",
     "static/media/ANWB.png": "/static/media/ANWB.dbb66ed5c7a45e3ac135.png",
     "static/media/E-Active.png": "/static/media/E-Active.3bab138e92a197bbc8fe.png",
     "index.html": "/index.html",
-    "main.c4316a47.js.map": "/static/js/main.c4316a47.js.map"
+    "main.33167f68.js.map": "/static/js/main.33167f68.js.map"
   },
   "entrypoints": [
-    "static/js/main.c4316a47.js"
+    "static/js/main.33167f68.js"
   ]
 }
