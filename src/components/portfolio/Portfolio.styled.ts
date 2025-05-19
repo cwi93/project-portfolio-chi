@@ -23,7 +23,6 @@ const CaseContainer = styled.div`
     text-transform: none;
     text-align: center;
     margin: 0;
-    padding: 0px 12px;
     color: #fff;
   }
 
@@ -31,15 +30,20 @@ const CaseContainer = styled.div`
     text-transform: uppercase;
     color: #fff;
     font-size: 1.3rem;
+
+    @media only screen and (max-width: 769px) {
+      margin: 1rem;
+    }
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 769px) {
     .case-block {
       position: absolute;
     }
 
     .case-block-description {
       opacity: 0;
+      padding: 0px 12px;
     }
 
     .logo-hover-floating {
@@ -120,11 +124,11 @@ const CaseContainer = styled.div`
 const CaseAnchor = styled.div`
   background-color: #fff;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     padding: 12px 24px;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 769px) {
     flex-grow: 1;
     position: relative;
     width: 25%;
@@ -134,8 +138,10 @@ const CaseAnchor = styled.div`
 
 const CaseBlock = styled.a`
   display: flex;
+  flex-direction: column;
   border: solid 2px #dfc0eb;
   text-align: center;
+  text-decoration: none;
 
   background-image: linear-gradient(#dfc0eb 100% 100%);
   background-size: 200%;
@@ -143,11 +149,12 @@ const CaseBlock = styled.a`
   background-repeat: no-repeat;
   transition: background-size 0.3s, background-position 0.3s 0.3s;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
+    align-items: center;
     padding: 24px;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 769px) {
     position: relative;
     min-height: 230px;
     padding: 50px 150px;
@@ -178,6 +185,10 @@ const CaseImage = styled.img`
   height: 100%;
   padding-bottom: 60px;
   z-index: 1;
+
+  @media only screen and (max-width: 769px) {
+    padding-bottom: 10px;
+  }
 `;
 
 export { CaseContainer, CaseAnchor, CaseBlock, CaseImage };
