@@ -56,6 +56,10 @@ const ContactInfo = styled.div`
       width: 100%;
     }
 
+    p {
+      padding: 0 4px;
+    }
+
     img {
       width: 110%;
     }
