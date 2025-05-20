@@ -22,14 +22,15 @@ const ChiWaiIntro = styled.div`
 
   @media only screen and (max-width: 769px) {
     width: 100%;
+    padding: 0 24px;
   }
   @media only screen and (min-width: 769px) {
     width: 46%;
+    padding-left: 24px;
   }
 
   color: #dfc0eb;
   font-size: 1.8rem;
-  padding-left: 24px;
 
   h1,
   p {
