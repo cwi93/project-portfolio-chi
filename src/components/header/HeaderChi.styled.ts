@@ -17,7 +17,14 @@ const HeaderNavigation = styled.div`
     display: block;
     position: relative;
     padding: 0.4em 0;
-    margin-right: 15px;
+
+    @media only screen and (max-width: 769px) {
+      margin-right: 24px;
+    }
+    @media only screen and (min-width: 769px) {
+      margin-right: 15px;
+    }
+
   }
 
   /* Fade in */

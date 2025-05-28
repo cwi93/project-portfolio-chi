@@ -20,16 +20,17 @@ const ChiWaiIntro = styled.div`
     font-weight: bold;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     width: 100%;
+    padding: 0 24px;
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 769px) {
     width: 46%;
+    padding-left: 24px;
   }
 
   color: #dfc0eb;
   font-size: 1.8rem;
-  padding-left: 24px;
 
   h1,
   p {
@@ -38,11 +39,11 @@ const ChiWaiIntro = styled.div`
 `;
 
 const ChiWaiImage = styled.div`
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     width: 100%;
     height: 300px;
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 769px) {
     width: 50%;
     padding-left: 24px;
   }
@@ -51,7 +52,7 @@ const ChiWaiImage = styled.div`
 const ChiWaiImportImage = styled(ImgDiv)`
   width: 45%;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     height: 300px;
     object-fit: cover;
   }
@@ -93,7 +94,7 @@ const ScrollDown = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     display: none;
   }
 `;
