@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   CaseBlock,
   CaseAnchor,
@@ -5,12 +6,14 @@ import {
   CaseImage
 } from "./Portfolio.styled";
 
+import Modal from "../modal/Modal";
+
 import Thirdera from "./images/Thirdera.png";
 import ANWB from "./images/ANWB.png";
 import DXC from "./images/DXC_Technology.png";
 import Evident from "./images/Evident.png";
 import EActive from "./images/E-Active.png";
-import HongKongCity from "./images/HongKongCity.png";
+import HongKongCity from "./images/HongKongCity_Shadow.png";
 
 const casesArray = [
   {
@@ -19,7 +22,17 @@ const casesArray = [
     link: "https://www.thirdera.com/",
     logo: `${Thirdera}`,
     description:
-      "At Thirdera I am capable of combining my eye for both UX and development. I’ve been helping customer to design and develop the most amazing and user friendly employee center portals."
+      "At Thirdera I am capable of combining my eye for both UX and development. I’ve been helping customer to design and develop the most amazing and user friendly employee center portals.",
+    skills: [
+      "Service Now",
+      "Figma",
+      "Maze",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "AngularJS",
+      "Scrum"
+    ]
   },
   {
     id: "ANWB",
@@ -27,7 +40,19 @@ const casesArray = [
     link: "https://www.anwb.nl",
     logo: `${ANWB}`,
     description:
-      "My career at ANWB was very informative for me. Together with my team we were responsible for the ANWB Car domain. Here I’ve learned to develop in typescript with Preact as framework, utilizing Gitlab & Styled Components and participating in UX research session."
+      "My career at ANWB was very informative for me. Together with my team we were responsible for the ANWB Car domain. Here I’ve learned to develop in typescript with Preact as framework, utilizing Gitlab & Styled Components and participating in UX research session.",
+    skills: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Typescript",
+      "Preact",
+      "Styled Components",
+      "LESS",
+      "Gitlab",
+      "Cypress",
+      "Scrum"
+    ]
   },
   {
     id: "Fruition Partners / DXC",
@@ -35,7 +60,8 @@ const casesArray = [
     link: "https://www.dxc.nl/",
     logo: `${DXC}`,
     description:
-      "As technical consultant I was responsible for development in Service Now using HTML, CSS and Javascript. My main focus and specialization is building portals (front-end) in Service Now. It was also important to use my expertise in order to guide the customer or give the customer advise."
+      "As technical consultant I was responsible for development in Service Now using HTML, CSS and Javascript. My main focus and specialization is building portals (front-end) in Service Now. It was also important to use my expertise in order to guide the customer or give the customer advise.",
+    skills: ["Service Now", "HTML", "CSS", "Javascript", "AngularJS", "Scrum"]
   },
   {
     id: "Evident",
@@ -43,7 +69,18 @@ const casesArray = [
     link: "https://www.valtech.com/valtech-welcomes-evident/",
     logo: `${Evident}`,
     description:
-      "As a developer I was responsible for solving issues from websites and helping the team with projects for different companies like “Hogeschool Utrecht”, “Staatsbosbeheer”, “Caldic”, “GITP” et cetera."
+      "As a developer I was responsible for solving issues from websites and helping the team with projects for different companies like “Hogeschool Utrecht”, “Staatsbosbeheer”, “Caldic”, “GITP” et cetera.",
+    skills: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Bootstrap",
+      "Sitecore",
+      "Kentico",
+      "LESS",
+      "SASS",
+      "Scrum"
+    ]
   },
   {
     id: "E-Active",
@@ -51,7 +88,8 @@ const casesArray = [
     link: "https://www.e-active.nl/",
     logo: `${EActive}`,
     description:
-      "During my internship at e-Active I've learned to develop in Zend Framework (PHP), writing technical and functional designs and created a Search Engine Optimalization report for the website www.klik-info.nl."
+      "During my internship at e-Active I've learned to develop in Zend Framework (PHP), writing technical and functional designs and created a Search Engine Optimalization report for the website www.klik-info.nl.",
+    skills: ["HTML", "CSS", "PHP", "Zend Framework", "Symfony"]
   },
   {
     id: "HKC",
@@ -59,18 +97,21 @@ const casesArray = [
     link: "https://www.hongkongcity-zwolle.nl/",
     logo: `${HongKongCity}`,
     description:
-      "From 2012 till 2020 I've been voluntarly helping with creating posters for seasonal offers and I've been responsible for designing and developing the website. The website is build is HTML, CSS and Javascript (AngularJS)."
+      "From 2012 till 2020 I've been voluntarly helping with creating posters for seasonal offers and I've been responsible for designing and developing the website. The website is build is HTML, CSS and Javascript (AngularJS).",
+    skills: ["HTML", "CSS", "Javascript", "AngularJS"]
   }
 ];
 
 export default function Portfolio() {
+  const [isModalOpen, setModalOpen] = useState<boolean>(false);
+
   return (
     <CaseContainer>
       <h1>MY PORTFOLIO</h1>
       {casesArray.map((cases) => {
         return (
           <CaseAnchor key={cases.id} className="cases">
-            <CaseBlock href={cases.link} target="_blank">
+            <CaseBlock onClick={() => setModalOpen(true)}>
               <CaseImage
                 src={cases.logo}
                 alt={`${cases.id} Logo`}
@@ -81,9 +122,29 @@ export default function Portfolio() {
                 <h5 className="case-block-role">{cases.role}</h5>
               </hgroup>
             </CaseBlock>
+            <Modal
+              isOpen={isModalOpen}
+              onClose={() => setModalOpen(false)}
+              hasCloseBtn={true}
+            >
+              <h1 className="modal-title">
+                {cases.role} at{" "}
+                <a className="company-link" href={cases.link} target="_blank">
+                  {cases.id}
+                </a>
+              </h1>
+              <p>{cases.description}</p>
+
+              <p className="skills-map">
+                {cases.skills.map((skills) => (
+                  <span className="skill-pill">{skills}</span>
+                ))}
+              </p>
+            </Modal>
           </CaseAnchor>
         );
       })}
+      ;
     </CaseContainer>
   );
 }

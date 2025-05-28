@@ -3,11 +3,12 @@ import styled from "styled-components";
 const CaseContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  padding-left: 12px;
 
   h1 {
     color: #dfc0eb;
     width: 100%;
-    padding-left: 24px;
+    padding-left: 12px;
   }
 
   .case-block {
@@ -132,7 +133,36 @@ const CaseAnchor = styled.div`
     flex-grow: 1;
     position: relative;
     width: 25%;
-    padding: 24px;
+    padding: 12px;
+  }
+
+  .modal-title {
+    padding-left: 0;
+  }
+
+  .company-link {
+    color: #dfc0eb;
+    text-decoration: none;
+  }
+
+  .company-link:hover,
+  .company-link:focus {
+    text-decoration: underline;
+  }
+
+  .skills-map {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+
+  .skill-pill {
+    padding: 12px;
+    margin-right: 8px;
+    border-radius: 25px;
+    background-color: #dfc0eb;
+    color: #fff;
   }
 `;
 
@@ -148,6 +178,10 @@ const CaseBlock = styled.a`
   background-position: 100% 100%;
   background-repeat: no-repeat;
   transition: background-size 0.3s, background-position 0.3s 0.3s;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media only screen and (max-width: 769px) {
     align-items: center;
@@ -180,7 +214,6 @@ const CaseBlock = styled.a`
 `;
 
 const CaseImage = styled.img`
-  max-height: 100px;
   max-width: 150px;
   height: 100%;
   padding-bottom: 60px;
@@ -188,6 +221,10 @@ const CaseImage = styled.img`
 
   @media only screen and (max-width: 769px) {
     padding-bottom: 10px;
+    max-height: 40px;
+  }
+  @media only screen and (min-width: 769px) {
+    max-height: 100px;
   }
 `;
 
