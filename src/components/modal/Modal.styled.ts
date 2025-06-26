@@ -14,7 +14,7 @@ const CloseButton = styled.button`
   background: none;
   border: none;
   outline: none;
-  color: #dfc0eb;
+  color: #090979;
 
   &:hover {
     opacity: 0.5;
