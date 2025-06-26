@@ -56,6 +56,35 @@ const CaseContainer = styled.div`
     }
   }
 
+  .modal-title {
+    padding-left: 0;
+  }
+
+  .company-link {
+    color: #dfc0eb !important;
+    text-decoration: none;
+  }
+
+  .company-link:hover,
+  .company-link:focus {
+    text-decoration: underline;
+  }
+
+  .skills-map {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+
+  .skill-pill {
+    padding: 12px 4px;
+    margin-right: 8px;
+    border-radius: 25px;
+    background-color: #dfc0eb;
+    color: #fff;
+  }
+
   @-webkit-keyframes float-up {
     100% {
       -webkit-transform: translateY(-25%);
@@ -134,35 +163,6 @@ const CaseAnchor = styled.div`
     position: relative;
     width: 25%;
     padding: 12px;
-  }
-
-  .modal-title {
-    padding-left: 0;
-  }
-
-  .company-link {
-    color: #dfc0eb;
-    text-decoration: none;
-  }
-
-  .company-link:hover,
-  .company-link:focus {
-    text-decoration: underline;
-  }
-
-  .skills-map {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-  }
-
-  .skill-pill {
-    padding: 12px;
-    margin-right: 8px;
-    border-radius: 25px;
-    background-color: #dfc0eb;
-    color: #fff;
   }
 `;
 
