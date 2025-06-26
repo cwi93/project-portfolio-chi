@@ -10,7 +10,7 @@ const HeaderNavigation = styled.div`
   }
   /* Underline styles */
   a {
-    color: #dfc0eb;
+    color: #fff;
     font-size: 2em;
     font-weight: bold;
     text-decoration: none;
@@ -24,7 +24,6 @@ const HeaderNavigation = styled.div`
     @media only screen and (min-width: 769px) {
       margin-right: 15px;
     }
-
   }
 
   /* Fade in */
@@ -35,7 +34,7 @@ const HeaderNavigation = styled.div`
     left: 0;
     width: 100%;
     height: 0.15em;
-    background-color: #dfc0eb;
+    background-color: #fff;
     transition: opacity 300ms, transform 300ms;
   }
 

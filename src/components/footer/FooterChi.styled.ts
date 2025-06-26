@@ -11,7 +11,7 @@ const FooterContainer = styled.div`
     width: 100%;
   }
   a {
-    color: #dfc0eb;
+    color: #fff;
     text-decoration: none;
     padding-right: 15px;
   }
@@ -71,11 +71,11 @@ const ContactInfo = styled.div`
 
   h1 {
     font-size: 3rem;
-    color: #dfc0eb;
+    color: #fff;
   }
 
   p {
-    color: #dfc0eb;
+    color: #fff;
     font-size: 1.5rem;
   }
 
