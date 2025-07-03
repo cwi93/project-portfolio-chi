@@ -6,6 +6,9 @@ export const useOutsideClick = (callback: () => void) => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       const element = event.target as HTMLElement;
+      const blurBackground = document.getElementsByClassName(
+        "portfolio-container"
+      );
 
       const dialog = document.getElementsByTagName("dialog");
       const openedDialog = dialog[0].hasAttribute("open");
@@ -14,6 +17,7 @@ export const useOutsideClick = (callback: () => void) => {
         element.classList.value.indexOf("modal-dialog") !== 0
       ) {
         dialog[0].close();
+        (blurBackground as any)[0].style.filter = "none";
       }
 
       if (ref.current && !ref.current.contains(event.target as Node)) {

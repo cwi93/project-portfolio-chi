@@ -19,7 +19,7 @@ export default function PorfolioChi() {
   });
 
   return (
-    <PorfolioChiContainer ref={ref}>
+    <PorfolioChiContainer ref={ref} className="portfolio-container">
       <BrowserRouter>
         <HeaderChi />
       </BrowserRouter>

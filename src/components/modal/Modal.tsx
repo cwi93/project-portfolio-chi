@@ -71,12 +71,17 @@ const Modal: React.FC<ModalProps> = ({
 
   useEffect(() => {
     const modalElement = modalRef.current;
+    const blurBackground = document.getElementsByClassName(
+      "portfolio-container"
+    );
 
     if (modalElement) {
       if (isModalOpen.isOpen) {
         modalElement.showModal();
+        (blurBackground as any)[0].style.filter = "blur(3px) brightness(70%)";
       } else {
         modalElement.close();
+        (blurBackground as any)[0].style.filter = "none";
       }
     }
   }, [isModalOpen]);
