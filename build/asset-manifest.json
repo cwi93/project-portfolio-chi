@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.29dc018c.js",
+    "main.js": "/static/js/main.0864ac50.js",
     "static/media/HongKongCity_Shadow.png": "/static/media/HongKongCity_Shadow.767c96f3161029b68885.png",
     "static/media/Chi_Japan.png": "/static/media/Chi_Japan.27bba17813d1b13dba65.png",
     "static/media/Chi_Tennis_Volley.jpg": "/static/media/Chi_Tennis_Volley.456bfe4f41fb10e5b01b.jpg",
@@ -9,9 +9,9 @@
     "static/media/ANWB.png": "/static/media/ANWB.dbb66ed5c7a45e3ac135.png",
     "static/media/E-Active.png": "/static/media/E-Active.3bab138e92a197bbc8fe.png",
     "index.html": "/index.html",
-    "main.29dc018c.js.map": "/static/js/main.29dc018c.js.map"
+    "main.0864ac50.js.map": "/static/js/main.0864ac50.js.map"
   },
   "entrypoints": [
-    "static/js/main.29dc018c.js"
+    "static/js/main.0864ac50.js"
   ]
 }
