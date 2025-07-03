@@ -29,7 +29,7 @@ const ChiWaiIntro = styled.div`
     padding-left: 24px;
   }
 
-  color: #dfc0eb;
+  color: #fff;
   font-size: 1.8rem;
 
   h1,
@@ -70,7 +70,7 @@ const ScrollDown = styled.div`
   }
 
   .arrow {
-    border: solid #dfc0eb;
+    border: solid #fff;
     border-width: 0 10px 10px 0;
     display: inline-block;
     padding: 0 40px 40px 0;

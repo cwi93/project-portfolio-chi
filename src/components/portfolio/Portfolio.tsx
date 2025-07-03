@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+  CaseWrapper,
   CaseBlock,
   CaseAnchor,
   CaseContainer,
@@ -17,7 +18,8 @@ import HongKongCity from "./images/HongKongCity_Shadow.png";
 
 const casesArray = [
   {
-    id: "Thirdera",
+    id: 6,
+    company: "Thirdera",
     role: "Design Technologist",
     link: "https://www.thirdera.com/",
     logo: `${Thirdera}`,
@@ -35,7 +37,8 @@ const casesArray = [
     ]
   },
   {
-    id: "ANWB",
+    id: 5,
+    company: "ANWB",
     role: "Frontend Developer",
     link: "https://www.anwb.nl",
     logo: `${ANWB}`,
@@ -55,7 +58,8 @@ const casesArray = [
     ]
   },
   {
-    id: "Fruition Partners / DXC",
+    id: 4,
+    company: "Fruition Partners / DXC",
     role: "Technical Consultant",
     link: "https://www.dxc.nl/",
     logo: `${DXC}`,
@@ -64,7 +68,8 @@ const casesArray = [
     skills: ["Service Now", "HTML", "CSS", "Javascript", "AngularJS", "Scrum"]
   },
   {
-    id: "Evident",
+    id: 3,
+    company: "Evident",
     role: "Web Developer",
     link: "https://www.valtech.com/valtech-welcomes-evident/",
     logo: `${Evident}`,
@@ -83,7 +88,8 @@ const casesArray = [
     ]
   },
   {
-    id: "E-Active",
+    id: 2,
+    company: "E-Active",
     role: "Intern / Web developer",
     link: "https://www.e-active.nl/",
     logo: `${EActive}`,
@@ -92,7 +98,8 @@ const casesArray = [
     skills: ["HTML", "CSS", "PHP", "Zend Framework", "Symfony"]
   },
   {
-    id: "HKC",
+    id: 1,
+    company: "HKC",
     role: "Web Developer / Content Creator",
     link: "https://www.hongkongcity-zwolle.nl/",
     logo: `${HongKongCity}`,
@@ -103,48 +110,95 @@ const casesArray = [
 ];
 
 export default function Portfolio() {
-  const [isModalOpen, setModalOpen] = useState<boolean>(false);
+  //const isModalOpen = useState<boolean>(false);
+  const [isModalOpen, setModalOpen] = useState({
+    isOpen: false,
+    caseObject: {
+      id: 0,
+      company: "",
+      role: "",
+      link: "",
+      logo: "",
+      description: "",
+      skills: [] as string[]
+    }
+  });
+  const { isOpen, caseObject } = isModalOpen;
 
   return (
     <CaseContainer>
       <h1>MY PORTFOLIO</h1>
-      {casesArray.map((cases) => {
-        return (
-          <CaseAnchor key={cases.id} className="cases">
-            <CaseBlock onClick={() => setModalOpen(true)}>
-              <CaseImage
-                src={cases.logo}
-                alt={`${cases.id} Logo`}
-                className={`${cases.id}-logo logo-hover-floating`}
-              />
-              <hgroup className="case-block">
-                <p className="case-block-description">{cases.description}</p>
-                <h5 className="case-block-role">{cases.role}</h5>
-              </hgroup>
+      <CaseWrapper>
+        {casesArray.map((cases) => {
+          return (
+            <CaseBlock key={cases.company} className="cases">
+              <CaseAnchor
+                onClick={() =>
+                  setModalOpen({
+                    ...isModalOpen,
+                    isOpen: true,
+                    caseObject: { ...cases }
+                  })
+                }
+              >
+                <CaseImage
+                  src={cases.logo}
+                  alt={`${cases.company} Logo`}
+                  className={`${cases.company}-logo logo-hover-floating`}
+                />
+                <hgroup className="case-block">
+                  <p className="case-block-description">{cases.description}</p>
+                  <h5 className="case-block-role">{cases.role}</h5>
+                </hgroup>
+              </CaseAnchor>
             </CaseBlock>
-            <Modal
-              isOpen={isModalOpen}
-              onClose={() => setModalOpen(false)}
-              hasCloseBtn={true}
-            >
-              <h1 className="modal-title">
-                {cases.role} at{" "}
-                <a className="company-link" href={cases.link} target="_blank">
-                  {cases.id}
-                </a>
-              </h1>
-              <p>{cases.description}</p>
+          );
+        })}
+        ;
+      </CaseWrapper>
+      <Modal
+        isOpen={isOpen}
+        caseObject={caseObject}
+        onClose={() =>
+          setModalOpen({
+            ...isModalOpen,
+            isOpen: false,
+            caseObject: {
+              id: 0,
+              company: "",
+              role: "",
+              link: "",
+              logo: "",
+              description: "",
+              skills: [] as string[]
+            }
+          })
+        }
+        hasCloseBtn={true}
+      >
+        <h1 className="modal-dialog-title">
+          {caseObject.role} at{" "}
+          <a
+            className="modal-dialog-link company-link"
+            href={caseObject.link}
+            target="_blank"
+          >
+            {caseObject.company}
+          </a>
+        </h1>
+        <p className="modal-dialog-p">{caseObject.description}</p>
 
-              <p className="skills-map">
-                {cases.skills.map((skills) => (
-                  <span className="skill-pill">{skills}</span>
-                ))}
-              </p>
-            </Modal>
-          </CaseAnchor>
-        );
-      })}
-      ;
+        <p className="modal-dialog-skills skills-map">
+          {caseObject.skills.map((skills) => (
+            <span
+              key={skills}
+              className={`modal-dialog-skill-pill ${skills} skill-pill`}
+            >
+              {skills}
+            </span>
+          ))}
+        </p>
+      </Modal>
     </CaseContainer>
   );
 }

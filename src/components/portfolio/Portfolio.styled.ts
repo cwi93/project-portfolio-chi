@@ -6,7 +6,7 @@ const CaseContainer = styled.div`
   padding-left: 12px;
 
   h1 {
-    color: #dfc0eb;
+    color: #fff;
     width: 100%;
     padding-left: 12px;
   }
@@ -15,7 +15,6 @@ const CaseContainer = styled.div`
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: #dfc0eb;
     flex-direction: column;
     white-space: pre-wrap;
   }
@@ -24,12 +23,16 @@ const CaseContainer = styled.div`
     text-transform: none;
     text-align: center;
     margin: 0;
-    color: #fff;
+    color: #090979;
+
+    @media only screen and (max-width: 769px) {
+      display: none;
+    }
   }
 
   .case-block-role {
     text-transform: uppercase;
-    color: #fff;
+    color: #090979;
     font-size: 1.3rem;
 
     @media only screen and (max-width: 769px) {
@@ -53,6 +56,40 @@ const CaseContainer = styled.div`
 
     .case-block-description {
       animation: float-down-fadeout 2s forwards;
+    }
+  }
+
+  .modal-dialog-title {
+    color: #090979;
+    padding-left: 0;
+  }
+
+  .company-link {
+    color: #090979 !important;
+    text-decoration: none;
+  }
+
+  .company-link:hover,
+  .company-link:focus {
+    text-decoration: underline;
+  }
+
+  .skills-map {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .skill-pill {
+    padding: 12px 4px;
+    margin-right: 8px;
+    border-radius: 25px;
+    background-color: #090979;
+    color: #fff;
+
+    @media only screen and (max-width: 869px) {
+      margin-bottom: 5px;
     }
   }
 
@@ -122,61 +159,35 @@ const CaseContainer = styled.div`
   }
 `;
 
-const CaseAnchor = styled.div`
-  background-color: #fff;
+const CaseWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 12px;
+`;
 
+const CaseBlock = styled.div`
   @media only screen and (max-width: 769px) {
-    padding: 12px 24px;
+    padding: 12px;
   }
 
   @media only screen and (min-width: 769px) {
-    flex-grow: 1;
-    position: relative;
-    width: 25%;
+    flex: 1 0 33.3333%;
+
+    @media only screen and (min-width: 896px) {
+      width: 25%;
+    }
     padding: 12px;
-  }
-
-  .modal-title {
-    padding-left: 0;
-  }
-
-  .company-link {
-    color: #dfc0eb;
-    text-decoration: none;
-  }
-
-  .company-link:hover,
-  .company-link:focus {
-    text-decoration: underline;
-  }
-
-  .skills-map {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-  }
-
-  .skill-pill {
-    padding: 12px;
-    margin-right: 8px;
-    border-radius: 25px;
-    background-color: #dfc0eb;
-    color: #fff;
   }
 `;
 
-const CaseBlock = styled.a`
+const CaseAnchor = styled.a`
   display: flex;
-  flex-direction: column;
-  border: solid 2px #dfc0eb;
+  justify-content: center;
+  border: solid 2px #fff;
   text-align: center;
   text-decoration: none;
 
-  background-image: linear-gradient(#dfc0eb 100% 100%);
-  background-size: 200%;
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
+  background: #fff;
   transition: background-size 0.3s, background-position 0.3s 0.3s;
 
   &:hover {
@@ -185,29 +196,36 @@ const CaseBlock = styled.a`
 
   @media only screen and (max-width: 769px) {
     align-items: center;
-    padding: 24px;
+    padding: 12px 12px 12px 24px;
   }
 
   @media only screen and (min-width: 769px) {
     position: relative;
-    min-height: 230px;
-    padding: 50px 150px;
+    min-height: 175px;
+    padding: 50px 100px;
+
+    @media only screen and (max-width: 896px) {
+      min-height: 150px;
+      padding: 50px 100px;
+    }
 
     &:hover {
       transition: background-size 0.3s 0.3s, background-position 0.3s;
       background-size: 200% 100%;
       background-position: 100% 100%;
 
-      .logo-hover-floating {
-        display: flex;
-        animation: float-up 5s forwards;
-      }
+      @media only screen and (min-width: 896px) {
+        .logo-hover-floating {
+          display: flex;
+          animation: float-up 5s forwards;
+        }
 
-      .case-block-description {
-        color: #fff;
-        position: relative;
+        .case-block-description {
+          color: #090979;
+          position: relative;
 
-        animation: float-bottom-to-top 2s forwards;
+          animation: float-bottom-to-top 2s forwards;
+        }
       }
     }
   }
@@ -223,9 +241,9 @@ const CaseImage = styled.img`
     padding-bottom: 10px;
     max-height: 40px;
   }
-  @media only screen and (min-width: 769px) {
+  @media only screen and (min-width: 869px) {
     max-height: 100px;
   }
 `;
 
-export { CaseContainer, CaseAnchor, CaseBlock, CaseImage };
+export { CaseContainer, CaseWrapper, CaseAnchor, CaseBlock, CaseImage };
