@@ -43,13 +43,8 @@ const PorfolioChi = () => css`
     }
   }
 `;
-
-const PortfolioContent = styled.div`
-  display: flex;
-`;
-
 const PorfolioChiContainer = styled.div`
   ${PorfolioChi}
 `;
 
-export { PorfolioChiContainer, PortfolioContent };
+export { PorfolioChiContainer };

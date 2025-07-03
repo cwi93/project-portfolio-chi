@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+  CaseWrapper,
   CaseBlock,
   CaseAnchor,
   CaseContainer,
@@ -127,32 +128,34 @@ export default function Portfolio() {
   return (
     <CaseContainer>
       <h1>MY PORTFOLIO</h1>
-      {casesArray.map((cases) => {
-        return (
-          <CaseAnchor key={cases.company} className="cases">
-            <CaseBlock
-              onClick={() =>
-                setModalOpen({
-                  ...isModalOpen,
-                  isOpen: true,
-                  caseObject: { ...cases }
-                })
-              }
-            >
-              <CaseImage
-                src={cases.logo}
-                alt={`${cases.company} Logo`}
-                className={`${cases.company}-logo logo-hover-floating`}
-              />
-              <hgroup className="case-block">
-                <p className="case-block-description">{cases.description}</p>
-                <h5 className="case-block-role">{cases.role}</h5>
-              </hgroup>
+      <CaseWrapper>
+        {casesArray.map((cases) => {
+          return (
+            <CaseBlock key={cases.company} className="cases">
+              <CaseAnchor
+                onClick={() =>
+                  setModalOpen({
+                    ...isModalOpen,
+                    isOpen: true,
+                    caseObject: { ...cases }
+                  })
+                }
+              >
+                <CaseImage
+                  src={cases.logo}
+                  alt={`${cases.company} Logo`}
+                  className={`${cases.company}-logo logo-hover-floating`}
+                />
+                <hgroup className="case-block">
+                  <p className="case-block-description">{cases.description}</p>
+                  <h5 className="case-block-role">{cases.role}</h5>
+                </hgroup>
+              </CaseAnchor>
             </CaseBlock>
-          </CaseAnchor>
-        );
-      })}
-      ;
+          );
+        })}
+        ;
+      </CaseWrapper>
       <Modal
         isOpen={isOpen}
         caseObject={caseObject}
@@ -173,17 +176,24 @@ export default function Portfolio() {
         }
         hasCloseBtn={true}
       >
-        <h1 className="modal-title">
+        <h1 className="modal-dialog-title">
           {caseObject.role} at{" "}
-          <a className="company-link" href={caseObject.link} target="_blank">
+          <a
+            className="modal-dialog-link company-link"
+            href={caseObject.link}
+            target="_blank"
+          >
             {caseObject.company}
           </a>
         </h1>
-        <p>{caseObject.description}</p>
+        <p className="modal-dialog-p">{caseObject.description}</p>
 
-        <p className="skills-map">
+        <p className="modal-dialog-skills skills-map">
           {caseObject.skills.map((skills) => (
-            <span key={skills} className={`${skills} skill-pill`}>
+            <span
+              key={skills}
+              className={`modal-dialog-skill-pill ${skills} skill-pill`}
+            >
               {skills}
             </span>
           ))}
