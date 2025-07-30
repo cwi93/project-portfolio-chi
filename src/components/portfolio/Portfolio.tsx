@@ -6,6 +6,7 @@ import {
   CaseContainer,
   CaseImage
 } from "./Portfolio.styled";
+import { useTheme } from "../../contexts/ThemeContext";
 
 import Modal from "../modal/Modal";
 
@@ -110,6 +111,7 @@ const casesArray = [
 ];
 
 export default function Portfolio() {
+  const { theme } = useTheme();
   //const isModalOpen = useState<boolean>(false);
   const [isModalOpen, setModalOpen] = useState({
     isOpen: false,
@@ -126,7 +128,7 @@ export default function Portfolio() {
   const { isOpen, caseObject } = isModalOpen;
 
   return (
-    <CaseContainer>
+    <CaseContainer id="portfolio" theme={theme}>
       <h1>MY PORTFOLIO</h1>
       <CaseWrapper>
         {casesArray.map((cases) => {
