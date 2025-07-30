@@ -1,0 +1,36 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Minimalist leaf favicon - Oblique orientation with tip pointing to top right -->
+  
+  <!-- Main leaf shape - oval with pointed tip, rotated obliquely -->
+  <path d="M8 20 C8 16 10 12 14 10 C18 8 22 8 26 6 C28 8 28 12 26 16 C24 20 20 22 16 22 C12 22 8 20 8 20 Z" 
+        fill="#6B8E23"/>
+  
+  <!-- Central vein - following the oblique angle -->
+  <line x1="12" y1="18" x2="24" y2="8" 
+        stroke="#5A7A1A" 
+        stroke-width="1.5" 
+        opacity="0.8"/>
+  
+  <!-- Minimal side veins for natural detail -->
+  <path d="M14 16 Q16 14 18 12" 
+        stroke="#5A7A1A" 
+        stroke-width="1" 
+        fill="none" 
+        opacity="0.6"/>
+  <path d="M14 16 Q12 16 10 18" 
+        stroke="#5A7A1A" 
+        stroke-width="1" 
+        fill="none" 
+        opacity="0.6"/>
+  
+  <path d="M18 14 Q20 12 22 10" 
+        stroke="#5A7A1A" 
+        stroke-width="0.8" 
+        fill="none" 
+        opacity="0.5"/>
+  <path d="M18 14 Q16 16 14 18" 
+        stroke="#5A7A1A" 
+        stroke-width="0.8" 
+        fill="none" 
+        opacity="0.5"/>
+</svg>

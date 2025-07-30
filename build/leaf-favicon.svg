@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified minimalist leaf favicon - Oblique orientation -->
+  
+  <!-- Simple leaf shape - ellipse rotated obliquely -->
+  <ellipse cx="18" cy="14" rx="6" ry="10" 
+           fill="#6B8E23"
+           transform="rotate(35 18 14)"/>
+  
+  <!-- Central vein following the oblique angle -->
+  <line x1="12" y1="18" x2="24" y2="8" 
+        stroke="#5A7A1A" 
+        stroke-width="1.5" 
+        opacity="0.8"/>
+</svg>

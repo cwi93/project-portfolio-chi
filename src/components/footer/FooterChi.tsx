@@ -7,6 +7,7 @@ import { FooterContainer, ContactInfo } from "./FooterChi.styled";
 import Chi_Tennis_Volley from "../../images/Chi_Tennis_Volley.jpg";
 
 export default function FooterChi() {
+
   return (
     <FooterContainer>
       <ContactInfo>

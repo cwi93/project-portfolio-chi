@@ -1,45 +1,136 @@
-import styled from "styled-components";
+/* ============================================
+   PORTFOLIO STYLED COMPONENTS
+   ============================================ */
 
-const CaseContainer = styled.div`
+import styled from "styled-components";
+import { Theme } from "../../contexts/ThemeContext";
+
+/* ============================================
+   TYPES
+   ============================================ */
+
+interface ThemedProps {
+  theme: Theme;
+}
+
+/* ============================================
+   MAIN CASE CONTAINER
+   ============================================ */
+
+const CaseContainer = styled.div<ThemedProps>`
   display: flex;
   flex-wrap: wrap;
   padding-left: 12px;
-
-  h1 {
-    color: #fff;
-    width: 100%;
-    padding-left: 12px;
+  
+  /* Responsive padding adjustments */
+  @media (max-width: 768px) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  @media (max-width: 480px) {
+    padding-left: 4px;
+    padding-right: 4px;
   }
 
+  /* Portfolio heading styles */
+  h1 {
+    color: ${props => props.theme.colors.text};
+    width: 100%;
+    padding-left: 12px;
+    
+    /* Responsive heading sizes */
+    font-size: 3rem;
+    
+    @media (max-width: 1024px) {
+      font-size: 2.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 2.2rem;
+      text-align: center;
+      padding-left: 0;
+    }
+    
+    @media (max-width: 640px) {
+      font-size: 2rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 1.8rem;
+    }
+    
+    @media (max-width: 360px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* Case block styles */
   .case-block {
     width: 100%;
     bottom: 0;
     left: 0;
     flex-direction: column;
     white-space: pre-wrap;
+    
+    /* Responsive spacing */
+    @media (max-width: 768px) {
+      padding: 0.5rem;
+    }
   }
 
+  /* Case description text */
   .case-block-description {
     text-transform: none;
     text-align: center;
     margin: 0;
-    color: #090979;
+    color: ${props => props.theme.colors.primary};
+    
+    /* Responsive font sizing */
+    font-size: 1rem;
+    
+    @media (max-width: 1024px) {
+      font-size: 0.9rem;
+    }
 
-    @media only screen and (max-width: 769px) {
+    @media only screen and (max-width: 768px) {
       display: none;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: 0.85rem;
     }
   }
 
+  /* Role text styling */
   .case-block-role {
     text-transform: uppercase;
     color: #090979;
     font-size: 1.3rem;
-
-    @media only screen and (max-width: 769px) {
+    
+    /* Responsive role text */
+    @media (max-width: 1024px) {
+      font-size: 1.2rem;
+    }
+    
+    @media (max-width: 768px) {
       margin: 1rem;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 1rem;
+      margin: 0.8rem;
+    }
+    
+    @media (max-width: 360px) {
+      font-size: 0.9rem;
+      margin: 0.6rem;
     }
   }
 
+  /* Desktop-specific positioning */
   @media only screen and (min-width: 769px) {
     .case-block {
       position: absolute;
@@ -59,14 +150,34 @@ const CaseContainer = styled.div`
     }
   }
 
+  /* Modal dialog styling */
   .modal-dialog-title {
     color: #090979;
     padding-left: 0;
+    
+    /* Responsive modal title */
+    font-size: 1.5rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 1.2rem;
+    }
   }
 
+  /* Company link styling */
   .company-link {
     color: #090979 !important;
     text-decoration: none;
+    
+    /* Touch-friendly links */
+    @media (max-width: 768px) {
+      padding: 0.5rem;
+      display: inline-block;
+    }
   }
 
   .company-link:hover,
@@ -74,25 +185,57 @@ const CaseContainer = styled.div`
     text-decoration: underline;
   }
 
+  /* Skills section styling */
   .skills-map {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-  }
-
-  .skill-pill {
-    padding: 12px 4px;
-    margin-right: 8px;
-    border-radius: 25px;
-    background-color: #090979;
-    color: #fff;
-
-    @media only screen and (max-width: 869px) {
-      margin-bottom: 5px;
+    gap: 0.5rem;
+    
+    /* Responsive skills layout */
+    @media (max-width: 768px) {
+      justify-content: center;
+      gap: 0.3rem;
     }
   }
 
+  /* Individual skill pill styling */
+  .skill-pill {
+    padding: 12px;
+    margin-right: 4px;
+    border-radius: 25px;
+    background-color: #090979;
+    color: #fff;
+    font-size: 0.9rem;
+    
+    /* Responsive skill pills */
+    @media (max-width: 1024px) {
+      padding: 10px;
+      font-size: 0.85rem;
+    }
+    
+    @media (max-width: 768px) {
+      margin-bottom: 5px;
+      margin-right: 5px;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+    }
+    
+    @media (max-width: 480px) {
+      padding: 6px 10px;
+      font-size: 0.75rem;
+      margin-right: 3px;
+      margin-bottom: 3px;
+    }
+    
+    @media (max-width: 360px) {
+      padding: 5px 8px;
+      font-size: 0.7rem;
+    }
+  }
+
+  /* Animation keyframes */
   @-webkit-keyframes float-up {
     100% {
       -webkit-transform: translateY(-25%);
@@ -159,15 +302,21 @@ const CaseContainer = styled.div`
   }
 `;
 
+/* ============================================
+   WRAPPER COMPONENTS
+   ============================================ */
+
 const CaseWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding-right: 12px;
 `;
 
+/* Case block layout */
 const CaseBlock = styled.div`
   @media only screen and (max-width: 769px) {
     padding: 12px;
+    flex-grow: 1;
   }
 
   @media only screen and (min-width: 769px) {
@@ -180,6 +329,11 @@ const CaseBlock = styled.div`
   }
 `;
 
+/* ============================================
+   INTERACTIVE ELEMENTS
+   ============================================ */
+
+/* Case anchor with hover effects */
 const CaseAnchor = styled.a`
   display: flex;
   justify-content: center;
@@ -231,6 +385,7 @@ const CaseAnchor = styled.a`
   }
 `;
 
+/* Case image styling */
 const CaseImage = styled.img`
   max-width: 150px;
   height: 100%;
@@ -245,5 +400,9 @@ const CaseImage = styled.img`
     max-height: 100px;
   }
 `;
+
+/* ============================================
+   EXPORTS
+   ============================================ */
 
 export { CaseContainer, CaseWrapper, CaseAnchor, CaseBlock, CaseImage };
