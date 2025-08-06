@@ -44,9 +44,9 @@ export default function ChiWai() {
           collaboration with all relevant stakeholders.
         </p>
         <p>
-          In addition to my expertise in UX and frontend development on the
-          ServiceNow platform, I also specialize in IT Service Management,
-          making me a versatile and valuable Technical Consultant.
+          Besides my expertise in UX and frontend development in Service Now, I
+          am also specialised in IT Service Management. Which makes me a
+          valueble and flexible Technical Consultant.
         </p>
         <ScrollDown theme={theme} onClick={scrollToPortfolio}>
           <i className="arrow"> </i>
