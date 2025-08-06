@@ -15,6 +15,7 @@ const ChiWaiContainer = styled.div`
   padding: 12px 0;
 
   @media (max-width: 768px) {
+    height: auto;
     padding: 8px 0;
   }
 `;

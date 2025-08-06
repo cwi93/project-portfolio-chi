@@ -37,10 +37,11 @@ export default function ChiWai() {
           My name is Chi-Wai Ip and I am a Service Now Frontend developer.{" "}
         </p>
         <p>
-          I am currently employed as Design Technologist at Thirdera where I am
-          responsible for developing portals for employees. I am also involved
-          in several design phases. Think of brainstorming, sketching, reviewing
-          and presenting designs with or to all parties involved.
+          I am currently employed as a Design Technologist at Thirdera, where I
+          am responsible for developing employee-facing portals. In addition to
+          development, I actively contribute to various design phases, including
+          brainstorming, sketching, reviewing, and presenting designs in
+          collaboration with all relevant stakeholders.
         </p>
         <p>
           Besides my expertise in UX and frontend development in Service Now, I
